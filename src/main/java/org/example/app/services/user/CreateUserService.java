@@ -39,11 +39,11 @@ public class CreateUserService {
         if (data[0].isEmpty())
             errors.put("username", Constants.INPUT_REQ_MSG);
         if (data[1].isEmpty())
-            errors.put("first_name", Constants.INPUT_REQ_MSG);
+            errors.put("first ame", Constants.INPUT_REQ_MSG);
         if (data[2].isEmpty())
-            errors.put("last_name", Constants.INPUT_REQ_MSG);
+            errors.put("last name", Constants.INPUT_REQ_MSG);
         if (DateValidator.isDateValid(data[3]))
-            errors.put("birth_date", Constants.INPUT_REQ_MSG);
+            errors.put("birth date", Constants.INPUT_REQ_MSG);
         if (EmailValidator.isEmailValid(data[4]))
             errors.put("email", Constants.INPUT_REQ_MSG);
         if (PhoneValidator.isPhoneValid(data[5]))

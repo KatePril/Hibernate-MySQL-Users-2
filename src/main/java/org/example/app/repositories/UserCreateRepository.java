@@ -15,8 +15,9 @@ public class UserCreateRepository {
         try (Session session = HibernateUtil.getSessionFactory().openSession()) {
             transaction = session.beginTransaction();
 
-            String hql = "INSERT INTO User (username, first_name, last_name, birth_date, email, phone)" +
-                    " VALUES (:username, :first_name, :last_name, :birth_date, :email, :phone)";
+            String hql = "INSERT INTO User (username, first_name, last_name, birth_date, email, phone) " +
+                    "VALUES (:username, :first_name, :last_name, :birth_date, :email, :phone)";
+
             MutationQuery query = session.createMutationQuery(hql);
             query.setParameter("username", user.getUsername());
             query.setParameter("first_name", user.getFirstName());
